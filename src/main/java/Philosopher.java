@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Philosopher extends Thread {
-    protected int id;
+    int id;
     Utensil left;
     Utensil right;
 

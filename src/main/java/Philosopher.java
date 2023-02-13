@@ -51,6 +51,16 @@ public class Philosopher extends Thread {
                 i++;
                 System.out.println("Philosopher #" + this.id + " has eaten " + i + " times.");
             }
+            else { // think for a second and check back
+                try {
+                    Thread.sleep(1000);
+                }
+                catch (InterruptedException e) {
+                    e.printStackTrace();
+                    System.out.println("Thread #" + this.id + " shutting down due to unexpected interruption");
+                    System.exit(1);
+                }
+            }
         }
     }
 
